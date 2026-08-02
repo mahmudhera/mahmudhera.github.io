@@ -60,7 +60,7 @@ img { display: block; max-width: 100%; }
 }
 .site-name {
   color: var(--ink);
-  font-weight: 760;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-decoration: none;
   white-space: nowrap;
@@ -101,7 +101,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.045em;
   line-height: 1.05;
 }
-.hero-copy h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 6.4rem); }
+.hero-copy h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 6.4rem); font-weight: 900; }
 .hero-copy p { max-width: 790px; }
 .cv-link { font-size: 1.08rem; font-weight: 700; }
 .eyebrow {

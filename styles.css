@@ -106,12 +106,12 @@ img { display: block; max-width: 100%; }
   margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 .social-link {
-  width: 26px;
-  height: 26px;
+  width: 39px;
+  height: 39px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -123,8 +123,8 @@ img { display: block; max-width: 100%; }
 }
 
 .social-link svg {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
 }
 

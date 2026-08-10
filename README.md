@@ -1,31 +1,15 @@
 # Mahmudur Rahman Hera — personal website
 
-This repository contains a static, responsive version of the information published at:
+This is the redesigned static GitHub Pages version of Mahmudur Rahman Hera's personal website.
 
-- https://sites.google.com/view/mahmudhera
-
-The site is intentionally dependency-free and can be hosted directly with GitHub Pages.
+The content is preserved from the existing site while the visual design has been rebuilt to closely follow the academic portfolio style of ffathena.github.io: fixed white navigation, Montserrat/Roboto typography, circular profile portrait, spacious two-column sections, blue academic links, alternating section backgrounds, and responsive mobile navigation.
 
 ## Files
 
-- `index.html` — all website content
-- `styles.css` — responsive layout and formatting
+- `index.html` — website content and layout
+- `styles.css` — responsive styling
 - `script.js` — mobile navigation and active-section highlighting
-- `assets/profile.jpg` — profile image
-- `.nojekyll` — tells GitHub Pages to serve the files directly
+- `assets/profile.jpg` — existing profile image
+- `.nojekyll` — direct GitHub Pages serving
 
-## Publish as the main GitHub Pages website
-
-For the GitHub account `mahmudhera`, name the repository exactly:
-
-```text
-mahmudhera.github.io
-```
-
-Then publish the repository from the `main` branch. The website will be available at:
-
-```text
-https://mahmudhera.github.io/
-```
-
-See `PUBLISHING.md` for the complete browser and command-line instructions.
+Publish the repository from the `main` branch in GitHub Pages.

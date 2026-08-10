@@ -1,4 +1,4 @@
-const menuButton = document.querySelector('.menu-button');
+const menuButton = document.querySelector('.navbar-toggle');
 const nav = document.querySelector('.site-nav');
 const navLinks = [...document.querySelectorAll('.site-nav a')];
 
@@ -24,6 +24,6 @@ const observer = new IntersectionObserver((entries) => {
   if (!visible) return;
   navLinks.forEach((link) => link.classList.remove('active'));
   linkById.get(visible.target.id)?.classList.add('active');
-}, { rootMargin: '-25% 0px -60% 0px', threshold: [0.05, 0.25, 0.5] });
+}, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05, 0.25, 0.5] });
 
 sections.forEach((section) => observer.observe(section));

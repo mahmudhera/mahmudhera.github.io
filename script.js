@@ -17,13 +17,20 @@ navLinks.forEach((link) => {
 const sections = [...document.querySelectorAll('main section[id]')];
 const linkById = new Map(navLinks.map((link) => [link.getAttribute('href').slice(1), link]));
 
-const observer = new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter((entry) => entry.isIntersecting)
-    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (!visible) return;
-  navLinks.forEach((link) => link.classList.remove('active'));
-  linkById.get(visible.target.id)?.classList.add('active');
-}, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05, 0.25, 0.5] });
+const setActiveLink = () => {
+  const scrollPosition = window.scrollY + 120;
+  let currentSection = sections[0];
 
-sections.forEach((section) => observer.observe(section));
+  sections.forEach((section) => {
+    if (scrollPosition >= section.offsetTop) {
+      currentSection = section;
+    }
+  });
+
+  navLinks.forEach((link) => link.classList.remove('active'));
+  linkById.get(currentSection.id)?.classList.add('active');
+};
+
+window.addEventListener('scroll', setActiveLink, { passive: true });
+window.addEventListener('load', setActiveLink);
+setActiveLink();

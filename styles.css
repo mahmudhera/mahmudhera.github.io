@@ -214,6 +214,7 @@ strong { font-weight: 700; }
 }
 .network-icon a:hover { color: var(--accent); text-decoration: none; }
 .network-icon svg { width: 27px; height: 27px; fill: currentColor; }
+.network-icon a img { width: 23px; height: 23px; object-fit: contain; }
 
 .article-style {
   font-size: 1rem;
@@ -221,6 +222,23 @@ strong { font-weight: 700; }
 }
 .about-copy { font-size: 1.02rem; }
 .about-copy p:last-child, .article-style p:last-child { margin-bottom: 0; }
+
+.education-list {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+.education-list li {
+  margin: 0.5rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+}
+.education-list li::before {
+  content: "🎓";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 .section-grid {
   display: grid;
@@ -293,8 +311,8 @@ strong { font-weight: 700; }
 .timeline li::before {
   content: "";
   position: absolute;
-  left: -6px;
-  top: .48rem;
+  left: -8px;
+  top: 5px;
   width: 10px;
   height: 10px;
   border: 2px solid var(--white);
@@ -402,7 +420,7 @@ strong { font-weight: 700; }
   left: 13px;
   top: 0;
   bottom: 0;
-  width: 1px;
+  width: 3px;
   background: #d9dee5;
 }
 .experience-entry:first-child .experience-track::before { top: 32px; }
@@ -411,18 +429,21 @@ strong { font-weight: 700; }
 .experience-dot {
   position: absolute;
   z-index: 1;
-  top: 27px;
-  left: 8px;
-  width: 11px;
-  height: 11px;
+  top: 30px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
   border: 1px solid #adb5bd;
-  border-radius: 50%;
+  border-radius: 60%;
   background: var(--white);
   box-shadow: 0 0 0 3px var(--white);
 }
 .experience-entry.current .experience-dot {
   border-color: var(--accent);
   background: var(--accent);
+  width: 20px;
+  height: 20px;
+  left: 4px;
 }
 
 .experience-card {
@@ -436,6 +457,11 @@ strong { font-weight: 700; }
   border-radius: 4px;
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .055);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.experience-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+  transform: translateY(-2px);
 }
 
 .experience-logo-link {
